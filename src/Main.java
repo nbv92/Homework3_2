@@ -11,9 +11,10 @@ public class Main {
 	
 	public static void task1() {
 		System.out.println("Task1");
-		clientOS = 1;
-		public boolean clientOSBool = clientOS<=1;
-		if (clientOsBool) {
+		//int clientOS = 1;
+		//boolean clientOSBool = clientOS<=1;почему не работает? Почему не работает модификатор паблик?
+		int clientOS = 1;
+		if (clientOS==1) {
 			System.out.println("Android\n");
 		}else {
 			System.out.println("iOS\n");
@@ -22,18 +23,20 @@ public class Main {
 	
 	public static void task2() {
 		System.out.println("Task2");
-		public int clientDeviceYear = 2015;
-		if(clientOs) {
+		int clientDeviceYear = 2015;
+		int clientOS = 1;
+		boolean clientOSBool = clientOS<=1;
+		if(clientOSBool) {
 			if (clientDeviceYear<2015) {
-				System.out.println("Установите облегченную версию приложения для Android по ссылке.");
+				System.out.println("Установите облегченную версию приложения для Android по ссылке."+"\n");
 			}else {
-				System.out.println("Установите версию приложения для Android по ссылке");
+				System.out.println("Установите версию приложения для Android по ссылке"+"\n");
 			}
 		}else {
 			if(clientDeviceYear<2015) {
-				System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+				System.out.println("Установите облегченную версию приложения для iOS по ссылке"+"\n");
 			}else {
-				System.out.println("Установите версию приложения для iOS по ссылке");
+				System.out.println("Установите версию приложения для iOS по ссылке"+"\n");
 			}
 		}
 		
@@ -44,12 +47,15 @@ public class Main {
 		int year = 2021;
 		if(year%4==0) {
 			if(year%400==0) {
-				System.out.println(year+" год является високосным.");
-			}else if{year%100==0);
-				System.out.println(year+" год не является високосным.");
+				System.out.println(year+" год является високосным.\n");
+			}else if(year%100==0);
+				System.out.println(year+" год не является високосным.\n");
 			}else if (year%4==0){
-				System.out.println(year+" год является високосным.");
+				System.out.println(year+" год является високосным.\n");
 			}
+		else{
+			System.out.println(year+" год не является високосным.\n");
+		}
 	}
 	
 	public static void task4() {
@@ -57,15 +63,15 @@ public class Main {
 		int eliveryDistance = 95;
 		int day = 1;
 		if (eliveryDistance<=20) {
-			System.out.println("Потребуется дней: "+day);
+			System.out.println("Потребуется дней: "+day+"\n");
 		}else if(eliveryDistance<60) {
 			day+=1;
-			System.out.println("Потребуется дней: "+day);
+			System.out.println("Потребуется дней: "+day+"\n");
 		}else if(eliveryDistance<100) {
 			day+=2;
-			System.out.println("Потребуется дней: "+day);
+			System.out.println("Потребуется дней: "+day+"\n");
 		}else {
-			System.out.println("Свыше 100 км доставки нет.");
+			System.out.println("Свыше 100 км доставки нет.\n");
 		}
 	}
 	
@@ -112,9 +118,11 @@ public class Main {
 				break;
 			default:
 				System.out.println("Back to Future!");	
-		}else {
-			System.out.println("It's TRAP!");
-			}
+		} //else if (monthNumber>12){
+			//System.out.println("It's TRAP!");
+			//}
+			//*/Main.java:118:11
+			//java: 'else' without 'if' Тоже не понял в чем ошибка
 		}
 	}
 
